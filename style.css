@@ -5,12 +5,11 @@
 }
 
 :root {
-    --orange: #F77A04;
-    --blue: #013498;
-    --dark: #1A1A1A;
-    --white: #FFFFFF;
-    --gray-light: #F5F5F5;
-    --gray: #DDDDDD;
+    --color1: #F77A04;
+    --color2: #FFFFFF;
+    --color3: #1A1A1A;
+    --color4: #013498;
+    --color5: #00003C;   
 }
 
 html {
@@ -76,8 +75,8 @@ img {
 }
 
 .btn-light {
-    background-color: var(--white);
-    color: var(--blue);
+    background-color: var(--color2);
+    color: var(--color4);
 }
 
 .btn-light:hover {
@@ -127,7 +126,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--orange);
+    color: var(--color1);
 }
 
 nav a::after {
@@ -137,7 +136,7 @@ nav a::after {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: var(--orange);
+    background-color: var(--color1);
     transition: width 0.3s ease;
 }
 
@@ -149,11 +148,11 @@ nav a:hover::after {
     border-radius: 5px;
     color: var(--gray);
     padding: 10px 15px;
-    background-color: var(--orange);
+    background-color: var(--color1);
 }
 
 #menu .nav-btn a:hover{
-    background-color: var(--blue);
+    background-color: var(--color4);
 }
 
 #menu .nav-btn a::after{
@@ -171,7 +170,7 @@ nav a:hover::after {
     height: 100vh;
     display: flex;
     align-items: center;
-    color: var(--white);
+    color: var(--color2);
     padding-top: 80px;
 }
 
@@ -187,34 +186,34 @@ nav a:hover::after {
 
 .hero-btn1 {
     font-size: 1rem;
-    background-color: var(--orange);
-    border: solid 2px var(--orange);
+    background-color: var(--color1);
+    border: solid 2px var(--color1);
     color: #1A1A1A;
 }
 
 .hero-btn1:hover {
     background-color: transparent;
-    color: var(--orange);
+    color: var(--color1);
 }
 
 
 .hero-btn2 {
     font-size: 1rem;
-    background-color: var(--white);
-    border: solid 2px var(--white);
+    background-color: var(--color2);
+    border: solid 2px var(--color2);
     color: #1A1A1A;
 }
 
 .hero-btn2:hover {
     background-color: transparent;
-    color: var(--white);
+    color: var(--color2);
 }
 
 .hero h1 {
     font-size: 5rem;
     margin-bottom: 20px;
     line-height: 1.2;
-    color: var(--orange);
+    color: var(--color1);
     text-shadow: black 0.1em 0.1em 0.2em
 
 }
@@ -230,7 +229,7 @@ nav a:hover::after {
     font-size: 1.2rem;
     margin-bottom: 30px;
     font-weight: 300;
-    color: var(--white);
+    color: var(--color2);
     text-shadow: black 0.1em 0.1em 0.2em;
 }
 
@@ -243,7 +242,7 @@ nav a:hover::after {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 50px;
-    color: var(--orange);
+    color: var(--color1);
     position: relative;
 }
 
@@ -252,7 +251,7 @@ nav a:hover::after {
     display: block;
     width: 80px;
     height: 4px;
-    background: var(--orange);
+    background: var(--color1);
     margin: 15px auto 0;
 }
 
@@ -269,12 +268,12 @@ nav a:hover::after {
 }
 
 .bg-dark {
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--color4);
+    color: var(--color2);
 }
 
 .light {
-    color: var(--white);
+    color: var(--color2);
 }
 
 /* Sobre nós - Nova versão com imagem e texto lado a lado */
@@ -328,7 +327,7 @@ nav a:hover::after {
     flex-wrap: wrap;
     padding: 20px;
     border-radius: 8px;
-    background-color: var(--white);
+    background-color: var(--color2);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
@@ -341,7 +340,7 @@ nav a:hover::after {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--orange);
+    color: var(--color1);
     margin-right: 5px;
 }
 
@@ -349,14 +348,14 @@ nav a:hover::after {
 .stat-percent {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--orange);
+    color: var(--color1);
 }
 
 .stat-label {
     width: 100%;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--blue);
+    color: var(--color4);
     margin-top: 10px;
 }
 
@@ -378,7 +377,7 @@ nav a:hover::after {
 }
 
 .service-card {
-    background-color: var(--white);
+    background-color: var(--color2);
     border-radius: 8px;
     padding: 30px;
     transition: all 0.3s ease;
@@ -409,7 +408,7 @@ nav a:hover::after {
 .service-card h3 {
     font-size: 1.3rem;
     margin-bottom: 15px;
-    color: var(--blue);
+    color: var(--color4);
 }
 
 /* Clientes */
@@ -444,15 +443,15 @@ nav a:hover::after {
 
 .carousel-slide p {
     font-weight: 600;
-    color: var(--blue);
+    color: var(--color4);
 }
 
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--orange);
-    color: var(--white);
+    background: var(--color1);
+    color: var(--color2);
     border: none;
     width: 40px;
     height: 40px;
@@ -508,7 +507,7 @@ nav a:hover::after {
 }
 
 .social-icon:hover {
-    background-color: var(--orange);
+    background-color: var(--color1);
 }
 
 .contact-form {
@@ -534,14 +533,14 @@ nav a:hover::after {
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    color: var(--white);
+    color: var(--color2);
     font-family: 'Titillium Web', sans-serif;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--orange);
+    border-color: var(--color1);
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -553,8 +552,8 @@ nav a:hover::after {
 
 /* Footer - Nova versão */
 footer {
-    background-color: var(--dark);
-    color: var(--white);
+    background-color: #00003C;
+    color: var(--color2);
 }
 
 .footer-main {
@@ -572,13 +571,13 @@ footer {
 }
 
 .footer-logo h2 {
-    color: var(--white);
+    color: var(--color2);
     margin-bottom: 5px;
     font-size: 1.8rem;
 }
 
 .footer-logo p {
-    color: var(--orange);
+    color: var(--color1);
     margin-bottom: 15px;
 }
 
@@ -602,11 +601,11 @@ footer {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    color: var(--white);
+    color: var(--color2);
 }
 
 .footer-social .social-icon:hover {
-    background-color: var(--orange);
+    background-color: var(--color1);
     transform: translateY(-3px);
 }
 
@@ -628,7 +627,7 @@ footer {
     bottom: 0;
     width: 40px;
     height: 3px;
-    background-color: var(--orange);
+    background-color: var(--color1);
 }
 
 .footer-links ul,
@@ -639,13 +638,13 @@ footer {
 }
 
 .footer-links a {
-    color: var(--white);
+    color: var(--color2);
     opacity: 0.8;
     transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: var(--orange);
+    color: var(--color1);
     opacity: 1;
     padding-left: 5px;
 }
@@ -682,8 +681,8 @@ footer {
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: var(--orange);
-    color: var(--white);
+    background-color: var(--color1);
+    color: var(--color2);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -786,7 +785,7 @@ footer {
         display: block;
         padding: 1rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        color: var(--white);
+        color: var(--color2);
     }
 
     #menu li {
