@@ -1,0 +1,210 @@
+/*--========== HEADER START ==========*/
+#header {
+    width: 100%;
+    height: 10vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+
+.menuNav {
+  /*background-color: transparent;*/
+  background-color: var(--color2);
+  transition: background-color 0.3s ease;
+}
+
+.menuNav.scrolled {
+  background-color: var(--color2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+
+#nav {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+}
+
+#nav a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: var(--color4);
+    font-weight: var(--fs-l);
+    text-transform: capitalize;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+#menu .menu-link {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: var(--h4);
+    transition: 0.5s;
+    position: relative;
+    font-weight: bold;
+}
+
+#menu .menu-link:hover{
+    color: var(--color1);
+}
+
+#menu .menu-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--color1);
+    transition: width 0.3s ease;
+}
+
+#menu .menu-link:hover::after {
+    width: 100%;
+}
+
+/*==== TESTE MENU ====*/
+#menu .menu-link.active {
+  color: var(--color1);
+}
+
+#menu .menu-link.active::after{
+    width: 100%;
+}
+
+
+
+#menu .menu-bnt {
+    border-radius: 5px;
+    background-color: var(--color1);
+    
+}
+
+#menu .menu-bnt a::after{
+    background-color: transparent;
+}
+
+#menu .menu-bnt a{
+    color: black;
+}
+
+#menu .menu-bnt a:hover{
+    color: white;
+}
+
+#btn-mobile {
+    display: none;
+    color: var(--color-02);
+}
+
+/*--========== HEADER END ==========*/
+
+/*--========== HEADER RESPONSIVE ==========*/
+
+@media (max-width: 1400px) {
+    #header{
+        padding: 0 5vw;
+    }
+
+    #nav a {
+        color: var(--color2);
+    }
+
+    .menuNav{
+        background-color: var(--color2);
+    }
+}
+
+@media (max-width: 950px) {
+    #menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        height: 90vh;
+        width: 90vw;
+
+        position: absolute;
+
+        top: 10vh;
+        right: -100vw;
+
+        background: var(--color5);
+        transition: 0.5s;
+        z-index: 1000;
+
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #header .container{
+        padding: 0;
+    }
+
+    #nav.active #menu {
+        visibility: visible;
+        overflow-y: auto;
+        right: 0;
+    }
+
+    #menu a {
+        padding: 20px;
+    }
+    
+    #btn-mobile {
+        display: flex;
+        padding: 10px;
+        font-size: 15px;
+        border: none;
+        background: var(--color4);
+        cursor: pointer;
+        gap: 10px;
+        border-radius: 5px;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+        color: var(--color2);
+    }
+    #hamburger::after,
+    #hamburger::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}

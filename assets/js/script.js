@@ -1,32 +1,3 @@
-// Navegação Mobile
-const btnMobile = document.getElementById('btn-mobile');
-const nav = document.getElementById('nav');
-
-function toggleMenu(event) {
-    if (event.type === 'touchstart') event.preventDefault();
-    nav.classList.toggle('active');
-    const active = nav.classList.contains('active');
-    event.currentTarget.setAttribute('aria-expanded', active);
-    if (active) {
-        event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
-    } else {
-        event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
-    }
-}
-
-btnMobile.addEventListener('click', toggleMenu);
-btnMobile.addEventListener('touchstart', toggleMenu);
-
-// Fechar menu ao clicar em um link
-const menuLinks = document.querySelectorAll('#menu a');
-menuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        btnMobile.setAttribute('aria-expanded', 'false');
-        btnMobile.setAttribute('aria-label', 'Abrir Menu');
-    });
-});
-
 // Animação dos números de estatísticas
 function animateStats() {
     const statsSection = document.querySelector('.about-stats');
@@ -171,26 +142,6 @@ if (contactForm) {
     });
 }
 
-// Efeito de rolagem para links de navegação
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            const headerHeight = document.querySelector('header').offsetHeight;
-            const targetPosition = targetElement.offsetTop - headerHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
 // Animação de elementos ao scroll
 function animateOnScroll() {
     const elements = document.querySelectorAll('.service-card, .about-card, .stat-item, .about-image, .about-text, .contact-form, .contact-info');
@@ -218,18 +169,3 @@ window.addEventListener('load', () => {
     animateOnScroll();
     animateStats();
 });
-
-// // Header fixo com mudança de estilo ao scroll
-// const header = document.getElementById('header');
-
-// function updateHeaderStyle() {
-//     if (window.pageYOffset > 50) {
-//         header.style.padding = '10px 0';
-//         header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-//     } else {
-//         header.style.padding = '15px 0';
-//         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-//     }
-// }
-
-// window.addEventListener('scroll', updateHeaderStyle);
